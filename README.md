@@ -6,7 +6,7 @@ An intelligent SMS-based expense tracking system that automatically processes ba
 
 This project consists of:
 - **Backend**: Firebase Functions + Firestore (this repository)
-- **Android App**: SMS Forwarder ([separate repository](https://github.com/your-username/android-sms-forwarder-app))
+- **Android App**: SMS Forwarder ([separate repository](https://github.com/thekkanathashish95/android-sms-forwarder-app))
 - **Web App**: React dashboard (planned)
 
 ## 🚀 Features
