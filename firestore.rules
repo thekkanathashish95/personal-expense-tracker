@@ -3,8 +3,14 @@ rules_version='2'
 service cloud.firestore {
   match /databases/{database}/documents {
     // Allow users to read and write their own expenses
+    // Also allow reading expenses for the specific Android UID
     match /expenses/{expenseId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow read: if request.auth != null && 
+        (request.auth.uid == resource.data.userId || 
+         resource.data.userId == "9xaBAZuh7QZ6umvNVgUegwdRdc03");
+      allow write: if request.auth != null && 
+        (request.auth.uid == resource.data.userId || 
+         request.auth.uid == request.resource.data.userId);
     }
     
     // Allow users to read their own SMS raw data (for debugging)
@@ -12,6 +18,11 @@ service cloud.firestore {
       allow read: if request.auth != null && request.auth.uid == resource.data.userId;
       // Writing to sms_raw is only allowed via Cloud Functions (Android app)
       allow write: if false;
+    }
+    
+    // Allow authenticated users to create and read user mappings
+    match /user_mappings/{mappingId} {
+      allow read, write: if request.auth != null;
     }
     
     // Deny all other access
