@@ -21,7 +21,7 @@ This project consists of:
 ### 📊 Data Extracted
 - **Amount**: Precise transaction amounts
 - **Category**: Shopping, Food & Dining, Transportation, etc.
-- **Source**: HDFC Bank account, HDFC Credit Card, ICICI Bank Account, ICICI Credit card
+- **Source**: Bank account, Credit Card, etc.
 - **Date**: Transaction date with fallback to SMS received time
 - **Notes**: Merchant/transaction details
 
