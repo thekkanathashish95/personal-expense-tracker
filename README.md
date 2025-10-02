@@ -57,7 +57,7 @@ firestore.indexes.json     # Database indexes
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/personal-expense-tracker.git
+   git clone https://github.com/thekkanathashish95/personal-expense-tracker.git
    cd personal-expense-tracker
    ```
 
@@ -176,4 +176,4 @@ MIT License - see LICENSE file for details.
 
 ---
 
-**Note**: This backend works with the [Android SMS Forwarder App](https://github.com/your-username/android-sms-forwarder-app) to create a complete expense tracking solution.
+**Note**: This backend works with the [Android SMS Forwarder App](https://github.com/thekkanathashish95/android-sms-forwarder-app) to create a complete expense tracking solution.
